@@ -1,15 +1,16 @@
-testDeck
-========
+# DataProducts
+Coursera Data Science project
 
-This is a test deck for publishing a slidify document.
+##Introduction
 
-Fork this repo.
+This repository is hosting the Data Products assignment of the DataScience track.
 
-Make an edit to this readme file on gh-pages branch. (You can do this directly on the github site by clicking on the readme file and then clicking edit)
+The purpose of this project is to demonstrate our understanding of Shiny and Slidify.
 
-Commit the change.
+##Shiny
 
-Go to kclifford281.github.io/testDeck/index.html
-And the presentation should be rendered
+The shiny app is a simple compound interest calculator.
 
+##Slidify
 
+The presentation explains compound interest calculation formula and the usage of the app.
