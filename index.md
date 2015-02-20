@@ -15,7 +15,7 @@ knit        : slidify::knit2slides
 
 1. Compound Interest - Overview
 2. Shiny Application Usage 
-3. Shiny App Server Code
+3. R Code Example
 
 --- .class #id 
 
@@ -57,23 +57,19 @@ Note: The number of times per year interest is compounded is fixed at 1 i.e. yea
 
 --- .class #id 
 
-## Shiny App Server Code
+## R Code Example
 
 
 ```r
-library(shiny) 
+deposit<-100   #Initial Deposit
+nyears<-2      #Number Of Years Invested
+irate<-10      #Interest Rate (Percentage)
 
-fval<-function(deposit,nyears,irate) {deposit*(1+(irate/100))^nyears}
+#FUTURE VALUE
+deposit*(1+(irate/100))^nyears
+```
 
-shinyServer(
-  function(input, output) {
-    
-    output$inputdepositvalue <- renderPrint({input$deposit})
-    output$inputnyearsvalue <- renderPrint({input$nyears})
-    output$inputiratevalue <- renderPrint({input$irate})
-    
-    output$finalValue <- renderPrint({fval(input$deposit,input$nyears,input$irate)})
-  }
-)
+```
+## [1] 121
 ```
 ---
